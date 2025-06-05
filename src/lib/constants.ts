@@ -1,7 +1,8 @@
-import type { NavItem, Service, Project } from '@/types';
-import { Car, ShieldCheck, Sparkles, Image as ImageIcon, Users, Phone, Mail, MapPin, CalendarDays, Menu, Layers } from 'lucide-react';
 
-export const APP_NAME = 'ShieldPro';
+import type { NavItem, Service, Project } from '@/types';
+import { Car, ShieldCheck, Sparkles, Image as ImageIcon, Users, Phone, Mail, MapPin, CalendarDays, Menu, Layers, Star, MessageSquareText } from 'lucide-react';
+
+export const APP_NAME = 'K7 AutoStudio';
 
 export const NAV_LINKS: NavItem[] = [
   { href: '/', label: 'Home', icon: Car },
@@ -14,9 +15,9 @@ export const NAV_LINKS: NavItem[] = [
 
 export const CONTACT_DETAILS = {
   phone: '(555) 123-4567',
-  email: 'contact@shieldpro.com',
+  email: 'contact@k7autostudio.com', // Updated email to match new app name if desired, or keep original
   address: '123 Auto Care Street, Anytown, USA 12345',
-  mapLink: 'https://maps.google.com/?q=123+Auto+Care+Street,+Anytown,+USA+12345',
+  mapLink: 'https://maps.google.com/?q=123+Auto+Care+Street,+Anytown,+USA+12345', // This is your Google Maps link
   openingHours: [
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM' },
     { day: 'Saturday', hours: '10:00 AM - 4:00 PM' },
@@ -55,13 +56,13 @@ export const PROJECTS_DATA: Project[] = [
 ];
 
 export const ABOUT_US_CONTENT = {
-  mission: "Our mission at ShieldPro is to provide top-tier automotive protection and enhancement services, utilizing the best materials and skilled technicians to ensure every vehicle leaves looking its best and fully protected.",
+  mission: `Our mission at ${APP_NAME} is to provide top-tier automotive protection and enhancement services, utilizing the best materials and skilled technicians to ensure every vehicle leaves looking its best and fully protected.`,
   values: ["Quality Craftsmanship", "Customer Satisfaction", "Integrity & Honesty", "Continuous Improvement", "Attention to Detail"],
-  teamIntro: "Our team consists of certified professionals passionate about cars and dedicated to delivering exceptional results. With years of experience in tinting and PPF application, we treat every vehicle as if it were our own."
+  teamIntro: `Our team consists of certified professionals passionate about cars and dedicated to delivering exceptional results. With years of experience in tinting and PPF application, we treat every vehicle as if it were our own.`
 };
 
 export const TESTIMONIALS = [
-  { quote: "ShieldPro did an amazing job on my car's tint. Professional, quick, and flawless!", author: "Alex P." },
+  { quote: `${APP_NAME} did an amazing job on my car's tint. Professional, quick, and flawless!`, author: "Alex P." },
   { quote: "The PPF installation was perfect. You can't even tell it's there, and I feel much better knowing my paint is protected.", author: "Maria K." },
-  { quote: "Excellent customer service and high-quality work. Highly recommend ShieldPro for any tinting needs.", author: "David R." },
+  { quote: `Excellent customer service and high-quality work. Highly recommend ${APP_NAME} for any tinting needs.`, author: "David R." },
 ];

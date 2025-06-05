@@ -1,10 +1,11 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { SERVICES_OFFERED, PROJECTS_DATA, CONTACT_DETAILS, ABOUT_US_CONTENT, TESTIMONIALS, APP_NAME } from '@/lib/constants';
 import type { Service, Project, Testimonial } from '@/types';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Sparkles, ShieldCheck, Quote } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Sparkles, ShieldCheck, Quote, Star, MessageSquareText } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -186,6 +187,30 @@ export default function HomePage() {
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href="/book-appointment">Book Your Appointment Now</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Feedback Section */}
+      <section className="py-16 md:py-24 bg-muted/30 animate-fade-in animation-delay-1200">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-headline">Share Your Experience with {APP_NAME}</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+            Your feedback helps us grow and improve. Let us know how we did!
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <Button asChild size="lg">
+              <Link href={CONTACT_DETAILS.mapLink} target="_blank" rel="noopener noreferrer">
+                <Star className="mr-2 h-5 w-5" />
+                Leave a Positive Review
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/contact">
+                <MessageSquareText className="mr-2 h-5 w-5" />
+                Provide Feedback
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

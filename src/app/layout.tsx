@@ -1,9 +1,11 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { APP_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'ShieldPro - Automotive Tinting and PPF',
+  title: `${APP_NAME} - Automotive Tinting and PPF`,
   description: 'Professional automotive window tinting and paint protection film services.',
 };
 
