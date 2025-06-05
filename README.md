@@ -84,6 +84,28 @@ npm run build
 
 This command compiles your Next.js application into static files and serverless functions ready for hosting.
 
+## Deployment
+
+This project is set up to be deployed using Firebase App Hosting, which is ideal for Next.js applications.
+
+1.  **Build Your App:** While Firebase App Hosting's CI/CD (Continuous Integration/Continuous Deployment) often handles this automatically when connected to a Git repository, the command to manually create a production build is `npm run build`.
+
+2.  **Firebase App Hosting:**
+    *   Your app is configured for Firebase App Hosting via the `apphosting.yaml` file. This file tells Firebase how to run your Next.js backend.
+    *   In the Firebase Console, navigate to the "App Hosting" section.
+    *   You can connect a Git repository (like GitHub) for automated builds and deployments whenever you push code changes.
+    *   Alternatively, you can deploy manually using the Firebase CLI, but the Git-integrated CI/CD is generally recommended for a smoother workflow.
+
+3.  **Connecting a Custom Domain:**
+    *   Once your site is deployed, Firebase will provide a default URL.
+    *   To use your own domain (e.g., `www.yourk7autostudio.com`), go to the "Hosting" or "App Hosting" section in the Firebase Console.
+    *   Select the option to "Add custom domain."
+    *   Follow the on-screen instructions to verify your domain ownership and update your domain's DNS records to point to Firebase. DNS changes can take some time to propagate.
+
+4.  **Monitor:** After deployment, you can monitor your application's performance and logs through the Firebase Console.
+
+Refer to the official Firebase App Hosting documentation for detailed setup and troubleshooting.
+
 ## Future AI Features (Genkit)
 
 The project includes Genkit, an AI framework. While no user-facing AI features are active by default, Genkit is configured in `src/ai/genkit.ts`. This setup allows for future integration of AI capabilities, such as:
