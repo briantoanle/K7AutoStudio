@@ -8,7 +8,7 @@ import type { NavItem } from '@/types';
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" aria-label={`${APP_NAME} home page`}>
           <Shield className="h-7 w-7 text-primary" />
           <span className="font-bold text-xl">{APP_NAME}</span>
@@ -17,7 +17,13 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((item: NavItem) =>
             item.isButton ? (
-              <Button key={item.label} asChild variant="default" size="sm">
+              <Button
+                key={item.label}
+                asChild
+                variant={item.label === 'Book Appointment' ? undefined : 'default'}
+                className={item.label === 'Book Appointment' ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}
+                size="sm"
+              >
                 <Link href={item.href}>
                   {item.icon && <item.icon className="mr-2 h-4 w-4" />}
                   {item.label}

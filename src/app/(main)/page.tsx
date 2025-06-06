@@ -33,7 +33,7 @@ export default function HomePage() {
             <Button asChild size="lg" variant="secondary">
               <Link href="/services">Our Services <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10">
+            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
               <Link href="/book-appointment">Book Appointment</Link>
             </Button>
           </div>

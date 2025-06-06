@@ -12,7 +12,7 @@ export default function BookAppointmentPage() {
         icon={CalendarDays}
       />
       <section className="py-12 md:py-20 animate-fade-in">
-        <div className="container max-w-3xl">
+        <div className="container max-w-3xl mx-auto flex justify-center">
           <Card className="shadow-xl">
             <CardHeader className="text-center">
               <CardTitle className="text-3xl font-bold font-headline">Appointment Request Form</CardTitle>
