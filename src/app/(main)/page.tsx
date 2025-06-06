@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { SERVICES_OFFERED, PROJECTS_DATA, CONTACT_DETAILS, ABOUT_US_CONTENT, TESTIMONIALS, APP_NAME } from '@/lib/constants';
+import { SERVICES_OFFERED, PROJECTS_DATA, CONTACT_DETAILS, TESTIMONIALS, APP_NAME } from '@/lib/constants';
 import type { Service, Project, Testimonial } from '@/types';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Sparkles, ShieldCheck, Quote, Star, MessageSquareText } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Mail, ShieldCheck, Quote, Star, MessageSquareText } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -16,8 +16,8 @@ export default function HomePage() {
           <Image 
             src="https://placehold.co/1920x1080.png" 
             alt="Abstract background" 
-            layout="fill" 
-            objectFit="cover" 
+            fill
+            style={{ objectFit: 'cover' }}
             data-ai-hint="abstract texture"
             priority
           />
@@ -119,30 +119,58 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* About Us Summary */}
+      {/* Why Choose Us Section (Replaces About Us Summary) */}
       <section className="py-16 md:py-24 animate-fade-in animation-delay-600">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-headline">About {APP_NAME}</h2>
-              <p className="text-lg text-muted-foreground mb-4">
-                {ABOUT_US_CONTENT.mission.substring(0, 150)}...
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 font-headline">
+                Experience the <span className="text-primary">{APP_NAME}</span> Difference
+              </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                {ABOUT_US_CONTENT.teamIntro.substring(0,150)}...
+                Discover why discerning vehicle owners choose us for premium protection and styling.
               </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">Expert Craftsmanship</h3>
+                    <p className="text-muted-foreground text-sm">Meticulous installation by certified professionals using top-tier materials.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <Star className="h-6 w-6 text-yellow-400 mr-3 mt-1" /> {/* Using yellow-400 for Star */}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">Customer-Centric Service</h3>
+                    <p className="text-muted-foreground text-sm">We're dedicated to your satisfaction, offering personalized advice and transparent pricing.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <ShieldCheck className="h-6 w-6 text-blue-500 mr-3 mt-1" /> {/* Using blue-500 for ShieldCheck */}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">Lasting Protection & Style</h3>
+                    <p className="text-muted-foreground text-sm">Enhance your vehicle's aesthetics and preserve its value with our durable solutions.</p>
+                  </div>
+                </li>
+              </ul>
               <Button asChild>
-                <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/about">More About Our Values <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </div>
             <div>
               <Image 
                 src="https://placehold.co/600x400.png" 
-                alt="Our workshop" 
+                alt="Technician applying film to a car" 
                 width={600} 
                 height={400} 
                 className="rounded-lg shadow-xl"
-                data-ai-hint="workshop interior"
+                data-ai-hint="technician car film"
               />
             </div>
           </div>
@@ -216,3 +244,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
